@@ -1,22 +1,29 @@
-package lista;
+package ex_laços_condicionais;
+//3- Faça um programa que receba a idade de uma pessoa e mostre na saida em qual
+//categoria ela se encontra
+// 10-14 infantil
+// 15-17 juvenil
+// 18-25 adulto
 
 import java.util.Scanner;
 
-//Faça um sistema que leia o tempo de duração de um evento em uma fábrica
-//expressa em segundos e mostre-o expresso em horas, minutos e segundos.
-
-	public class ex_03 {
-			public static void main(String[] args) {
-				Scanner sc = new Scanner(System.in);
-				
-				int x,horas,minutosi,minutos,seg;
-				System.out.println("Quanto tempo durou o evento ?");
-				x = sc.nextInt();
-				
-				minutosi = x /60;
-				horas = minutosi/60;
-				minutos = minutosi%60;
-				seg = x%60;
-				System.out.println("Logo o evento durou: "+horas+" horas e "+ minutos+ " minutos e " + seg+ " segundos ");
-			}
+public class ex_03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int idade;
+		
+		System.out.println("Digite sua idade");
+		idade = sc.nextInt();
+		
+		if(idade >=10 && idade <= 14) {
+			System.out.println("Voce e do publico infatil");
+		}
+		if(idade >=15 && idade <= 17) {
+			System.out.println("Voce e do publico juvenil");
+		}
+		if(idade >=18 && idade <= 25) {
+			System.out.println("Voce e do publico adulto");
+		}
+		
+	}
 }

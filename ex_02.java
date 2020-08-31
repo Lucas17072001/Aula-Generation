@@ -1,25 +1,41 @@
-package lista;
+package ex_laços_condicionais;
 
 import java.util.Scanner;
 
-//Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a
-//expressa em anos, meses e dias.
-
 public class ex_02 {
-	
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	
-	int x, anos,meses,mes,dias;
+	int a,b,c;
 	
-	System.out.println("Digite quandos dias voce ja viveu");
-	x = sc.nextInt();
+	System.out.println("Digite o primeiro valor");
+	a = sc.nextInt();
+	System.out.println("Digite o segundo valor");
+	b = sc.nextInt();
+	System.out.println("Digite o terceiro valor");
+	c = sc.nextInt();
 	
-	anos = x/365;
-	meses = x%365;
-	mes = meses/30;
-	dias =  meses%30;
-	
-	System.out.println("Voce tem "+anos+" anos e "+mes+" meses e "+ dias+ " dias");
+	if (a >b && c < b) {
+	 
+		 System.out.println(c+" "+b+" "+a);
 	}
+	 
+	else if (a > c && b < c) {
+		 
+			 System.out.println(b+" "+c+" "+a);		
+		 }
+	else if (b > c && a < c) {
+		System.out.println(a+" "+c+" "+b);
+	}
+	else if (b > a && c < a) {
+		System.out.println(c+" "+a+" "+b);
+	}
+	else if (c > a && b < a) {
+		System.out.println(b+" "+a+" "+c);
+	}
+	else  {
+		System.out.println(a+" "+b+" "+c);
+	}
+		}
 }
+

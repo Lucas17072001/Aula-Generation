@@ -1,31 +1,26 @@
-package lista;
-
-import java.math.*;
+package ex_laços_condicionais;
+//4- Faça um programa em que permita a entrada de um número qualquer e exiba se este
+//número é par ou ímpar. Se for par exiba também a raiz quadrada do mesmo; se for
+//ímpar exiba o número elevado ao quadrado
 import java.util.Scanner;
-
-//4. Escreva um sistema que leia três números inteiros e positivos (A, B, C) e
-//calcule a seguinte expressão:
+import java.math.*;
 
 public class ex_04 {
-
-	
 	public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	
-	int a,b,c,r,s,d;
-	
-	System.out.println("Digite o valor de A");
-	a = sc.nextInt();
-	System.out.println("Digite o valor de B");
-	b = sc.nextInt();
-	System.out.println("Digite o valor de C");
-	c = sc.nextInt();
-	
-	r = (int) Math.pow(a+b, 2);
-	s = (int) Math.pow(b+c, 2);
-	
-	d = (r+s)/2;
-	
-	System.out.println("O valor de D é: " + d);
-}
+		Scanner sc = new Scanner(System.in);
+		
+		int valor,a;
+		
+		System.out.println("Digite o valor ");
+		valor = sc.nextInt();
+		
+		if(valor % 2 ==0) {
+		a = (int) Math.sqrt(valor);
+		System.out.println(a);
+		}
+		else {
+			a = (int) Math.pow(valor, 2);
+			System.out.println(a);
+		}
+	}
 }
